@@ -1,27 +1,100 @@
-## Laravel PHP Framework
+LESU 
+===================
+### LARAVEL Eset Server Update ###
+The **LESU** is a script that can help you to run a sever update for eset products.
+Hey! I'm your first Markdown document in **StackEdit**[^stackedit]. Don't delete me, I'm very helpful! I can be recovered anyway in the **Utils** tab of the <i class="icon-cog"></i> **Settings** dialog.
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+----------
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Screen-Shots
+-------------
 
-## Official Documentation
+Admin Dashboard:
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+![admin dashboard](https://github.com/ayooby/nod32-server-update/blob/master/public/asset/admin-panel.png?raw=true)
 
-## Contributing
+User Creation:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+![User Creation page](https://github.com/ayooby/nod32-server-update/blob/master/public/asset/user-creation.png?raw=true)
 
-## Security Vulnerabilities
+> **What's Working:**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+> - Create User.
+> - Delete User.
+> - Disable expired User.
+> - Clearing your browser's data may **delete all your local documents!** Make sure your documents are synchronized with **Google Drive** or **Dropbox** (check out the [<i class="icon-refresh"></i> Synchronization](#synchronization) section).
 
-### License
+#### <i class="icon-info"></i> What's NOT Working
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+ - User Edit.
+ - Admin Edit, Create.
+ - Password Generator.
+
+
+
+
+### <i class="icon-hdd"></i> **Installing**
+
+ 1. Install via terminal
+ 
+ clone LESU
+
+ `git clone https://github.com/ayooby/eset-server-update.git`
+ 
+   `composer update`
+   
+
+   `php artisan migrate`
+
+ 2. Install on shared hosting
+ 
+LESU can work on shared hosts perfectly.
+This link may help you:
+[Deploy Laravel on Shared Host](http://blog.kongnir.com/2015/09/25/setting-up-laravel-5-on-shared-hosting-server/)
+
+
+#### <i class="icon-pencil"></i> Creating User
+
+Admin dashboard Login URL is:
+[http://example.com/auth/login](http://example.com/auth/login)
+
+Default user/pass for admin dashboard is:  ***admin/admin***
+[http://example.com/auth/login](http://example.com/auth/login)
+
+to create new user click on add user this sample url:
+[http://example.com/admin/create](http://example.com/admin/create)
+
+
+#### <i class="icon-hdd"></i> where to add update files
+
+You should upload all update files in
+ **storage/updates** 
+ folder.
+
+#### <i class="icon-hdd"></i> What is right URL to get Updates
+
+URL for download updates ESET products is:
+[http://example.com/down/](http://example.com/down/)
+
+<i class="icon-info"></i> change update address
+You can also change address for download updates in Route file in:
+
+`app/Http/routes.php`
+
+change these line to your desire address:
+` get('/down', ['uses' => 'FileController@index']);`
+  `get('/down/{file_name}', ['uses' => 'FileController@getByfile']);`
+  `get('/down/{folder}/{file_name}', ['uses' => 'FileController@getFileByFolder']); `
+
+
+
+----------
+
+
+
+### Support LESU
+
+Just tell me what should i add to this project.
+
+

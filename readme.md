@@ -1,8 +1,9 @@
+
 LESU 
 ===================
 ### LARAVEL Eset Server Update ###
 The **LESU** is a script that can help you to run a sever update for eset products.
-Hey! I'm your first Markdown document in **StackEdit**[^stackedit]. Don't delete me, I'm very helpful! I can be recovered anyway in the **Utils** tab of the <i class="icon-cog"></i> **Settings** dialog.
+
 
 ----------
 
@@ -23,7 +24,7 @@ User Creation:
 > - Create User.
 > - Delete User.
 > - Disable expired User.
-> - Clearing your browser's data may **delete all your local documents!** Make sure your documents are synchronized with **Google Drive** or **Dropbox** (check out the [<i class="icon-refresh"></i> Synchronization](#synchronization) section).
+
 
 #### <i class="icon-info"></i> What's NOT Working
 

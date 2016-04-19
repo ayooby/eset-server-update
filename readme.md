@@ -13,11 +13,11 @@ Screen-Shots
 
 Admin Dashboard:
 
-![admin dashboard](https://github.com/ayooby/nod32-server-update/blob/master/public/asset/admin-panel.png?raw=true)
+![admin dashboard](http://ayooby.ir/img/asset/admin-panel.png)
 
 User Creation:
 
-![User Creation page](https://github.com/ayooby/nod32-server-update/blob/master/public/asset/user-creation.png?raw=true)
+![User Creation page](http://ayooby.ir/img/asset/user-creation.png)
 
 > **What's Working:**
 
